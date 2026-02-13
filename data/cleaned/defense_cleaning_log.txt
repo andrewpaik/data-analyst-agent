@@ -1,0 +1,8 @@
+DEFENSE INDUSTRY — CLEANING LOG
+==================================================
+1. Dropped 2 columns with 100% missing: ['total_current_assets', 'total_current_liabilities']
+2. Dropped research_and_development (54% missing — not consistently reported in defense)
+3. Removed LMT FY2025 row (partial year, mostly null)
+4. Created 11 derived metrics: ['gross_margin', 'operating_margin', 'net_margin', 'ebitda_margin', 'fcf_margin', 'debt_to_assets', 'equity_ratio', 'revenue_per_sga', 'capex_intensity', 'revenue_yoy', 'profit_yoy']
+5. Computed 1yr, 3yr, 5yr total stock returns per company
+6. Added size_tier classification (Mid/Large/Mega-Cap)

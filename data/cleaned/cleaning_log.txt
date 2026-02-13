@@ -1,0 +1,21 @@
+CLEANING LOG
+Original: 2020 rows × 16 columns
+Cleaned:  2000 rows × 24 columns
+==================================================
+1. Removed 20 duplicate rows (2020 → 2000)
+2. Standardized all column names to lowercase with underscores
+3. Parsed order_date to datetime64
+4. Cleaned product_category: stripped whitespace + title-cased (19 → 6 unique values)
+5. customer_age: 80 nulls → median imputation (median=37)
+6. discount_pct: 40 nulls → median imputation (median=11.6)
+7. shipping_days: 60 nulls → median imputation (median=3)
+8. satisfaction_score: 100 nulls → median imputation (median=4)
+9. Flagged 31 extreme unit_price outliers (Z>3) — NOT removed, flagged for review
+10. Converted customer_age, shipping_days, satisfaction_score to int
+11. Created derived feature: order_year
+12. Created derived feature: order_month
+13. Created derived feature: order_quarter
+14. Created derived feature: order_dayofweek
+15. Created derived feature: net_revenue
+16. Created derived feature: profit_margin
+17. Created derived feature: revenue_per_unit
